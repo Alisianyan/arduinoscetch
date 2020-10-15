@@ -1,0 +1,22 @@
+цикл for позволяет обходить несколько значений. 
+
+Допустим, надо последовательно включить светодиоды на портах 2,5,10
+  int ports[] = {2, 5, 10};
+  for (int i = 0; i <3; i++) {
+      digitalWrite(ports[i], HIGH);
+      delay(500);
+      digitalWrite(ports[i], LOW);
+    }
+
+
+Или все сразу
+  int ports[] = {2, 5, 10};
+  for (int i = 0; i <3; i++) {
+      digitalWrite(ports[i], HIGH);
+}
+      delay(500);
+
+  for (int i = 0; i <3; i++) {
+      digitalWrite(ports[i], LOW);
+}
+
