@@ -1,3 +1,7 @@
+/*подключи светодиоды к цифровым пинам 2,5,6
+А потенциометр - средний пин к а0, крайние - к 5v и gnd
+*/
+
 void setup() {
   // put your setup code here, to run once:
 Serial.begin(9600);
