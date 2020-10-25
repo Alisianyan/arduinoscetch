@@ -1,6 +1,3 @@
-int inches = 0;
-
-int cm = 0;
 int GREEN = 3;
 int YELLOW = 4;
 int RED = 5;
@@ -27,14 +24,9 @@ void setup()
 
 void loop()
 {
-  // measure the ping time in cm
+  int inches = 0;
   cm = 0.01723 * readUltrasonicDistance(7, 7);
-  // convert to inches by dividing by 2.54
-  inches = (cm / 2.54);
-  Serial.print(inches);
-  Serial.print("in, ");
-  Serial.print(cm);
-  Serial.println("cm");
+
   if (cm <= 30) {
   digitalWrite(GREEN, HIGH);
 }
@@ -46,7 +38,5 @@ else {
 }
   
   delay(100); // Wait for 100 millisecond(s)
-  digitalWrite(GREEN, LOW);
-  digitalWrite(YELLOW, LOW);
-  digitalWrite(RED, LOW);
+  digitalWrite(GREEN, LOW);  digitalWrite(YELLOW, LOW);  digitalWrite(RED, LOW);
 }
