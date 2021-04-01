@@ -1,0 +1,17 @@
+   if (irrecv.decode(&results)) // если данные пришли выполняем команды
+   {
+      Serial.println(results.value); // отправляем полученные данные на порт
+    
+      // включаем и выключаем светодиод, в зависимости от полученного сигнала  
+      
+      switch (results.value) {
+        case 16718055:
+        digitalWrite(3, HIGH);
+        delay(1000);
+        break;
+      switch (results.value) {
+        case 12345:
+        digitalWrite(3, HIGH);
+        delay(1000);
+        break;      
+      
