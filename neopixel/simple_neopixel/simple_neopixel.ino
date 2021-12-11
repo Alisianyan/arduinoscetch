@@ -12,6 +12,7 @@ int delayval = 1000; // timing delay in milliseconds
 void setup() {
   // Initialize the NeoPixel library.
   pixels.begin();
+  pixels.setBrightness(100);
 }
 
 void loop() {
