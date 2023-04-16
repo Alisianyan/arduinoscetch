@@ -1,9 +1,9 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
-map<string, int> LEDcolor
+/*map<string, int> LEDcolor;
 LEDcolor["RED"] = 0
 LEDcolor["GREEN"] = 1
-LEDcolor["Blue"] = 2
+LEDcolor["Blue"] = 2 */
 
 // called this way, it uses the default address 0x40
 //Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
@@ -47,7 +47,7 @@ void setup() {
 
 void loop() { 
   
-/* for (int i = 0; i < 3; i++) {
+ for (int i = 0; i < 3; i++) {
   pwm.setPWM(i, 0, 4095);
   delay(500);
   pwm.setPWM(i, 0, 0);
@@ -58,11 +58,5 @@ for (int i = 0; i < 3; i++) {
   delay(500);
   pwm2.setPWM(i, 0, 0);
 } */
-for (auto element:LEDcolor {
-  pwm2.setPWM(element, 0, 4095);
-  delay(500)
-  pwm2.setPWM(i, 0, 0);
-  }
-)
 
-  }
+)
