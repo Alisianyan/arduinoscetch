@@ -73,5 +73,11 @@ void gradientUpdate(uint32_t indexX, uint32_t indexY){
 }
  
 void loop() {
-
+    for (int i = 0; i<=3; i++){
+      for (int k = 0; k <= 4; k++){
+        setColorbyXY(255, 255, 255, i, k);
+        delay(2000);
+      }
+    }
+    
 } 
