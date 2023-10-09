@@ -9,6 +9,7 @@ void setup()
   pinMode(A0, INPUT);
   Serial.begin(9600);
   pixels.begin();
+  pixels.setBrightness(50);
 }
 
 void loop()
@@ -16,7 +17,7 @@ void loop()
 
   voltmeter();
   Serial.println(voltmeter());
-  led_on(int());
+  led_on(int(voltmeter()));
 }
 
 float voltmeter(){
