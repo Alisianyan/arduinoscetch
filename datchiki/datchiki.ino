@@ -4,7 +4,6 @@ int moisture = 0;
 
 void setup()
 {
-  pinMode(A0, OUTPUT);
   pinMode(A1, INPUT);
   Serial.begin(9600);
   pinMode(8, OUTPUT);
@@ -16,15 +15,24 @@ void setup()
 
 void loop()
 {
-
+  led_off();
+      
   moisture = analogRead(A1);
   Serial.println(moisture);
+  which_led_turn_on();
+  delay(100); // Wait for 100 millisecond(s)
+}
+
+void led_off() {
   digitalWrite(8, LOW);
   digitalWrite(9, LOW);
   digitalWrite(10, LOW);
   digitalWrite(11, LOW);
   digitalWrite(12, LOW);
-  if (moisture < 200) {
+}
+
+void which_led_turn_on () {
+    if (moisture < 200) {
     digitalWrite(12, HIGH);
   } else {
     if (moisture < 400) {
@@ -41,5 +49,4 @@ void loop()
       }
     }
   }
-  delay(100); // Wait for 100 millisecond(s)
 }
