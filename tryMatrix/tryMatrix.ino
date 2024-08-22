@@ -19,13 +19,16 @@ void loop() {
 
 for (int j=0; j <= NUMPIXELS; j++){
     for (int k=0; k <= 2; k++){
-        tempX
-        tempY
-        arrayOfCoordinates [j][k]
+        //int tempX 
+        //int tempY
+        int arrayOfCoordinates [j][k];
+        pixels.setPixelColor(j, pixels.Color(255, 0, 0));
+        delay(50);
+        digitalWrite(PIN, LOW);
       }
   }
 
-  for (int i=0; i <= NUMPIXELS + 4; i++) {
+/*  for (int i=0; i <= NUMPIXELS + 4; i++) {
 
     pixels.setPixelColor(i, pixels.Color(255, 0, 0));
     pixels.show();
@@ -35,5 +38,5 @@ for (int j=0; j <= NUMPIXELS; j++){
 
     delay(delayval);
         digitalWrite(PIN, LOW);
-  }
+  } */
 }
