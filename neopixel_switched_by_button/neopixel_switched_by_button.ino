@@ -1,7 +1,7 @@
 #include <Adafruit_NeoPixel.h>
 #define PIN 3
 #define LED                         LED_BUILTIN  // digital pin connected to LED, for testing of switch code only
-#define NUMPIXELS 100
+#define NUMPIXELS 256
 bool    led_status  =                        LOW; // start with LED off, for testing of switch code  only
 
 int     button_switch =                       2; // external interrupt  pin
@@ -66,8 +66,10 @@ void loop() {
       Serial.println("Pushed");
       rainbowCycle(20);
       digitalWrite(LED, led_status);
-    }else {
-      turnOffStrip();
+    }
+    else {
+      //turnOffStrip();
+      matrixToCenter ();
       Serial.println("pwn");
       // do  other things....
     }
@@ -132,3 +134,17 @@ void turnOffStrip() {
     }
   }
 }
+void matrixToCenter () {
+     for (int i=0; i < NUMPIXELS; i=i+1) {
+        if ((0 <= NUMPIXELS <= 16)|(249 <= NUMPIXELS <= 255)) {
+          strip.setPixelColor(i, strip.Color(250, 250, 0));
+          strip.show();
+          }
+      }
+  while (true) {
+    delay(100);
+    if (interrupt_process_status) {
+      return;
+    }
+  }
+  }
