@@ -1,6 +1,6 @@
 #include <Adafruit_NeoPixel.h>
 
-#define PIN 2   // input pin Neopixel is attached to
+#define PIN 13   // input pin Neopixel is attached to
 
 #define NUMPIXELS      8 // number of neopixels in strip
 
